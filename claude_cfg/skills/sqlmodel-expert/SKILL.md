@@ -27,10 +27,6 @@ class Task(SQLModel, table=True):
 ### Initialize Database
 
 ```bash
-# Using provided script
-python scripts/init_db.py --url postgresql://user:pass@localhost/db
-
-# Or manually
 from sqlmodel import create_engine
 engine = create_engine("postgresql://user:pass@localhost/db")
 SQLModel.metadata.create_all(engine)
@@ -39,10 +35,6 @@ SQLModel.metadata.create_all(engine)
 ### Create Migration
 
 ```bash
-# Using provided helper script
-./scripts/migrate.sh create "add user table"
-
-# Or directly with Alembic
 alembic revision --autogenerate -m "add user table"
 alembic upgrade head
 ```
