@@ -1,5 +1,8 @@
+update-skills:
+	echo "TODO:"
+
 link-skills:
-	stow claude_cfg -t ~/.claude
+	stow skills -t ~/.claude
 
 link-skills-codex:
-	stow claude_cfg -t ~/.codex
+	stow skills -t ~/.codex
